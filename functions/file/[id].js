@@ -12,7 +12,8 @@ export async function onRequest(context) {  // Contents of context object
      let lujing = url.pathname;
      lujing = lujing.split('/');
      lujing = lujing[2];
-     const wjname =escape(lujing).replace(/\%u/g,'/u');
+     // const wjname =escape(lujing).replace(/\%u/g,'/u');
+    const wjname =decodeURI(lujing)
      const zlj = await env.img_url.getWithMetadata(wjname);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
