@@ -13,11 +13,11 @@ export async function onRequest(context) {  // Contents of context object
      let urlhz ='LL';
      let lx ='lx';
      if (zlj.value == null){
-         lx = false;
-         urlhz = url.pathname;
-     }else{
-         lx = true;
+         // lx = false;
          urlhz = '/file/' + zlj.value;
+     }else{
+         // lx = true;
+         urlhz = url.pathname;
      };
     // const response = fetch('https://telegra.ph/file/' + zlj.value + url.search, { 
      // const response = fetch('https://telegra.ph' + urlhz + url.search ,{
