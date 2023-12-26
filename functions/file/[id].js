@@ -21,7 +21,7 @@ export async function onRequest(context) {  // Contents of context object
      };
     // const response = fetch('https://telegra.ph/file/' + zlj.value + url.search, { 
      // const response = fetch('https://telegra.ph' + urlhz + url.search ,{
-     const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=https://telegra.ph' + urlhz + lx + zlj.value + url.search ,{ 
+     const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=https://telegra.ph' + urlhz + lx + zlj.value + url.pathname.slice(6) + url.search ,{ 
          method: request.method,
          headers: request.headers,
          body: request.body,
