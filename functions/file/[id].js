@@ -13,7 +13,7 @@ function ch2Unicdoe(str){
 		}
 	}
 	return unicode;
-
+}
 export async function onRequest(context) {  // Contents of context object  
     const {   
         request, // same as existing Worker API    
