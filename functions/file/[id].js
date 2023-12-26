@@ -9,16 +9,10 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
-    
+     const urlhz = url.pathname
      const zlj = await env.img_url.getWithMetadata('二次元_大腿_修女');//JSON.stringify(
-      if (zlj.value == null){
-         const urlhz = url.pathname; 
-      }else{
-          if (zlj.value != ""){
-          urlhz = url.pathname; 
-          }else{
-          urlhz == 'file/' + zlj.value; 
-          }; 
+      if (zlj.value != ""){
+           urlhz = zlj.value; 
       }; 
      const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=https://telegra.ph/' + urlhz{ 
      // const response = fetch('https://telegra.ph/' + urlhz + url.search, {  
