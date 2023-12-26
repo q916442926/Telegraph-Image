@@ -12,7 +12,7 @@ export async function onRequest(context) {  // Contents of context object
      const zlj = await env.img_url.getWithMetadata('d48682cedb94d371246b4.jpg');  //JSON.stringify()
      let urlhz ='LL';
      if (zlj.value === ""){
-         urlhz = url.pathname;
+         urlhz = url.pathname + url.search;
      }else{
          urlhz = 'file/' + zlj.value;
      };
