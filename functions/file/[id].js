@@ -12,7 +12,8 @@ export async function onRequest(context) {  // Contents of context object
      let lujing = url.pathname;
      lujing = lujing.split('/');
      const wenjianming = lujing[2];
-     const zlj = await env.img_url.getWithMetadata(wenjianming);  //JSON.stringify()
+     const wenjianming1 = '二次元_大腿_修女30.jpg';
+     const zlj = await env.img_url.getWithMetadata(wenjianming1);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
      if (zlj.value == ""){
