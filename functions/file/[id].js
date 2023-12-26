@@ -11,9 +11,11 @@ export async function onRequest(context) {  // Contents of context object
      const url = new URL(request.url);
      const zlj = await env.img_url.getWithMetadata(url.pathname.slice(6));  //JSON.stringify()
      let urlhz ='LL';
-     if (zlj.value === ""){
+     let lx ='lx';
+     if (zlj.value == ""){
          urlhz = url.pathname;
      }else{
+         lx = true
          urlhz = '/file/' + zlj.value;
      };
     // const response = fetch('https://telegra.ph/file/' + zlj.value + url.search, { 
