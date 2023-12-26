@@ -9,10 +9,10 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
-     const zlj = await env.img_url.getWithMetadata('5f954516455ba3352f8d1.jpg');  //JSON.stringify()
+     const zlj = await env.img_url.getWithMetadata(url.pathname.slice(6));  //JSON.stringify()
      let urlhz ='LL';
      if (zlj.value === ""){
-         urlhz = url.pathname.slice(6);
+         urlhz = url.pathname.slice;
      }else{
          urlhz = '/file/' + zlj.value;
      };
