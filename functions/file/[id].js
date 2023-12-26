@@ -12,7 +12,7 @@ export async function onRequest(context) {  // Contents of context object
     
      const zlj = await env.img_url.getWithMetadata('二次元_大腿_修女');//JSON.stringify(
      if (zlj.value != ""){
-         const urlhz = '/file/' + zlj.value
+         const urlhz = 'file/' + zlj.value
      }else{
          const urlhz = url.pathname
      }; 
