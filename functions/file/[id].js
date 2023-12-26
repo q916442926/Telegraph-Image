@@ -12,7 +12,6 @@ export async function onRequest(context) {  // Contents of context object
      const zlj = await env.img_url.getWithMetadata('二次元_白丝_粉毛_玉足.jpg');  //JSON.stringify()
      let ll ='LL';
      var vv = 'vv';
-         kk = 'kk';
     // if (zlj.value === ""){
     //     const urlhz = url.pathname;
     // }else{
