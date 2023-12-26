@@ -27,7 +27,7 @@ export async function onRequest(context) {  // Contents of context object
          }else{
              lx = '对象存在';
              urlhz = '/file/' + zlj.value;
-         }
+         };
      };
     // const response = fetch('https://telegra.ph/file/' + zlj.value + url.search, { 
      const response = fetch('https://telegra.ph' + urlhz + url.search ,{
