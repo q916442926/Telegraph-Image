@@ -9,11 +9,11 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
-     let lujing = url.pathname;
-     lujing = lujing.split('/');
-     lujing = lujing[2];
-     const lujingc = '二次元_大腿_修女25.jpg';
-     const zlj = await env.img_url.getWithMetadata(lujingc);  //JSON.stringify()
+     // let lujing = url.pathname;
+     // lujing = lujing.split('/');
+     // lujing = lujing[2];
+     const lujing = params.i;
+     const zlj = await env.img_url.getWithMetadata(lujing);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
      if (zlj.value == ""){
@@ -25,7 +25,7 @@ export async function onRequest(context) {  // Contents of context object
      };
     // const response = fetch('https://telegra.ph/file/' + zlj.value + url.search, { 
      // const response = fetch('https://telegra.ph' + urlhz + url.search ,{
-     const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + urlhz + lujingc +lx + params.id,{ 
+     const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=https://telegra.ph' + urlhz + url.search,{ 
          method: request.method,
          headers: request.headers,
          body: request.body,
