@@ -9,10 +9,9 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
-     // let lujing = url.pathname;
-     // lujing = lujing.split('/');
-     // lujing = lujing[2];
-     const lujing = params.id;
+     let lujing = url.pathname;
+     lujing = lujing.split('/');
+     const wenjianming = lujing[2];
      const zlj = await env.img_url.getWithMetadata(lujing);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
