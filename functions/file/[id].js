@@ -9,8 +9,9 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
+    let guestChantId = await img_url.get('img_url',{ type: "json" })
     // const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
-    const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + url.pathname + '|' + url.search + '|' + url, {    
+    const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + guestChantId, {    
          method: request.method,
          headers: request.headers,
          body: request.body,
