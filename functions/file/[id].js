@@ -11,7 +11,7 @@ export async function onRequest(context) {  // Contents of context object
      const url = new URL(request.url);
      let lujing = url.pathname
      lujing = lujing.substr(6)
-     const zlj = await env.img_url.getWithMetadata(lujing);  //JSON.stringify()
+     const zlj = await env.img_url.getWithMetadata(params.id);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
      if (zlj.value == ""){
