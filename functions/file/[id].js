@@ -43,7 +43,7 @@ export async function onRequest(context) {  // Contents of context object
 
         if (typeof env.img_url == "undefined" || env.img_url == null || env.img_url == ""){}else{
             //check the record from kv
-            const record = await env.img_url.getWithMetadata(params.id); 
+            const record = await env.img_url.getWithMetadata(wjname); 
             console.log("record")
             console.log(record)
             if (record.metadata === null) {
@@ -94,7 +94,7 @@ export async function onRequest(context) {  // Contents of context object
                     
                 }else{
                     //add image to kv
-                    await env.img_url.put(params.id, "",{
+                    await env.img_url.put(wjname, "",{
                         metadata: { ListType: "None", Label: "None",TimeStamp: time },
                     });
                     
@@ -108,7 +108,7 @@ export async function onRequest(context) {  // Contents of context object
                     console.log(env.img_url=="true")
                     if (typeof env.img_url == "undefined" || env.img_url == null || env.img_url == ""){}else{
                         //add image to kv
-                        await env.img_url.put(params.id, "",{
+                        await env.img_url.put(wjname, "",{
                             metadata: { ListType: "None", Label: moderate_data.rating_label,TimeStamp: time },
                         });
                     }  
