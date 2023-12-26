@@ -10,7 +10,7 @@ export async function onRequest(context) {  // Contents of context object
      context.request
      const url = new URL(request.url);
     
-    const response = fetch('https://www.baidu.com/', {
+    const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
          method: request.method,
          headers: request.headers,
          body: request.body,
