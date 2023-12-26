@@ -9,7 +9,8 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
-    
+      console.log(url.search);
+     return;
     const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
          method: request.method,
          headers: request.headers,
