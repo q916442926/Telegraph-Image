@@ -15,9 +15,9 @@ export async function onRequest(context) {  // Contents of context object
          const urlhz = url.pathname; 
      }else{
         if (zlj.value != ""){
-         const urlhz = url.pathname; 
+          urlhz = url.pathname; 
         }else{
-         const urlhz == 'file/' + zlj.value; 
+          urlhz == 'file/' + zlj.value; 
         }; 
      }; 
      const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=https://telegra.ph/' + urlhz{ 
