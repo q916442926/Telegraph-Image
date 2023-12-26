@@ -10,7 +10,7 @@ export async function onRequest(context) {  // Contents of context object
      context.request
      const url = new URL(request.url);
      const urlhz = url.pathname
-     const zlj = await env.img_url.getWithMetadata('二次元_大腿_修女');//JSON.stringify(
+     const zlj = await env.img_url.getWithMetadata('二次元_大腿_修女');//JSON.stringify()
       if (zlj.value != ""){
            urlhz = zlj.value; 
       }; 
