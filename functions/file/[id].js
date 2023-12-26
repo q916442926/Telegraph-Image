@@ -9,7 +9,7 @@ export async function onRequest(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
-     const zlj = await env.img_url.getWithMetadata(url.pathname.slice(6));  //JSON.stringify()
+     const zlj = await env.img_url.getWithMetadata('二次元_大腿_修女8.jpg');  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
      if (zlj.value == null){
