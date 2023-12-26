@@ -10,14 +10,14 @@ export async function onRequest(context) {  // Contents of context object
      context.request
     
      const url = new URL(request.url);
-     const zlj = await env.img_url.getWithMetadata('5f954516455ba3352f8d1.jpg');//JSON.stringify(
-     if (zlj.value != ""){
-         const urlhz = zlj.value
-     }else{
-         const urlhz = url.search
-     };
-     // const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + guest, { 
-     const response = fetch('https://telegra.ph/' + url.pathname + urlhz, {   
+     // const zlj = await env.img_url.getWithMetadata('5f954516455ba3352f8d1.jpg');//JSON.stringify(
+     // if (zlj.value != ""){
+     //     const urlhz = zlj.value
+     // }else{
+     //     const urlhz = url.search
+     // };
+        const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + url.search, { 
+     // const response = fetch('https://telegra.ph/' + url.pathname + urlhz, {   
          method: request.method,
          headers: request.headers,
          body: request.body,
