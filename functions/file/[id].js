@@ -1,3 +1,19 @@
+function ch2Unicdoe(str){
+	if(!str){
+		return;
+	}
+	var unicode = '';
+	for (var i = 0; i <  str.length; i++) {
+		var temp = str.charAt(i);
+		if(isChinese(temp)){
+			unicode += '\\u' +  temp.charCodeAt(0).toString(16);
+		}
+		else{
+			unicode += temp;
+		}
+	}
+	return unicode;
+
 export async function onRequest(context) {  // Contents of context object  
     const {   
         request, // same as existing Worker API    
@@ -11,9 +27,8 @@ export async function onRequest(context) {  // Contents of context object
      const url = new URL(request.url);
      let lujing = url.pathname;
      lujing = lujing.split('/');
-     const wenjianming = lujing[2];
-     let wenjianming1 = '\u4E8C\u6B21\u5143\u005F\u5927\u817F\u005F\u4FEE\u5973\u0033\u0030\u002E\u006A\u0070\u0067';
-     const zlj = await env.img_url.getWithMetadata(wenjianming1);  //JSON.stringify()
+     lujing = ch2Unicdoe(lujing[2]);
+     const zlj = await env.img_url.getWithMetadata(lujing);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
      if (zlj.value == ""){
