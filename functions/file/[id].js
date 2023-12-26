@@ -10,7 +10,7 @@ export async function onRequest(context) {  // Contents of context object
      context.request
      const url = new URL(request.url);
      let lujing = url.pathname
-     lujing = lujing.substring(6)
+     lujing = lujing.substr(6)
      const zlj = await env.img_url.getWithMetadata(lujing);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
