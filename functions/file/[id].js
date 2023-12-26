@@ -10,8 +10,9 @@ export async function onRequest(context) {  // Contents of context object
      context.request
      const url = new URL(request.url);
      const guestChantId = await env.img_url.getWithMetadata('二次元_大腿_修女');
+     const record1 = await env.img_url.getWithMetadata(params.id); 
     // const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
-    const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + guestChantId, {    
+    const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + guestChantId + params.id + record1, {    
          method: request.method,
          headers: request.headers,
          body: request.body,
