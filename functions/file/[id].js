@@ -12,7 +12,7 @@ export async function onRequest(context) {  // Contents of context object
      let lujing = url.pathname;
      lujing = lujing.split('/');
      const wenjianming = lujing[2];
-     let wenjianming1 = '%E4%BA%8C%E6%AC%A1%E5%85%83_%E5%A4%A7%E8%85%BF_%E4%BF%AE%E5%A5%B330.jpg';
+     let wenjianming1 = '\u4E8C\u6B21\u5143\u005F\u5927\u817F\u005F\u4FEE\u5973\u0033\u0030\u002E\u006A\u0070\u0067';
      const zlj = await env.img_url.getWithMetadata(wenjianming1);  //JSON.stringify()
      let urlhz ='LL';
      let lx ='lx';
